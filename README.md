@@ -1,4 +1,4 @@
-node-express-starter
+Loc8r Application
 ====================
 
 NodeJS and ExpressJS starter template for MVC application
