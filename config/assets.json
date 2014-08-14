@@ -2,7 +2,7 @@
     "main": {
         "css": {
             "public/build/css/main.min.css": [
-                "public/libs/bootstrap/dist/css/bootstrap.css",
+                "public/libs/bootstrap/dist/css/amelia.bootstrap.css",
                 "public/css/**/*.css"
             ]
         },
