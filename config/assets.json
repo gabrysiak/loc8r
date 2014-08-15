@@ -3,6 +3,7 @@
         "css": {
             "public/build/css/main.min.css": [
                 "public/libs/bootstrap/dist/css/amelia.bootstrap.css",
+                "public/libs/fontawesome/css/font-awesome.min.css",
                 "public/css/**/*.css"
             ]
         },

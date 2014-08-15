@@ -5,7 +5,7 @@
  */
 
 module.exports.about = function(req, res) {
-    res.render('index', { title: 'About' });
+    res.render('about', { title: 'About' });
 };
 
 /*
@@ -13,5 +13,5 @@ module.exports.about = function(req, res) {
  */
 
 module.exports.signin = function(req, res) {
-    res.render('index', { title: 'Sign in' });
+    res.render('signin', { title: 'Sign in' });
 };
