@@ -7,7 +7,13 @@
  */
 
 var mongoose = require('mongoose'),
-    dbURI = 'mongodb://localhost/Loc8r'; 
+    dbURI = 'mongodb://localhost/Loc8r';
+
+// If we are running in production (Heroku) then get dbURI from config that we set up previously
+if (process.env.NODE_ENV === 'production') {
+    // dbURI = 'mongodb://loc8rUser:loc8rUser@ds063439.mongolab.com:63439/loc8r';
+    dbURI = process.env.MONGOLAB_URI;
+}
 
 mongoose.connect(dbURI);
 
