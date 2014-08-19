@@ -1,6 +1,6 @@
-var ctrl = require('../server/controllers/locations');
+var ctrl = require('../app/controllers/locations');
 
-module.exports = function(app) {
+module.exports = function(app, passport) {
     app.get('/', ctrl.homelist);
     app.get('/location', ctrl.locationInfo);
     app.get('/location/review/new', ctrl.addReview);

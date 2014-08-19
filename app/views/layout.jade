@@ -21,9 +21,16 @@ html
           ul.nav.navbar-nav
             li
               a(href='/about/') About
+            if (loggedIn)
+              li
+                a(href='/profile/') Profile
           ul.nav.navbar-nav.navbar-right
-            li
-              a(href='/signin/') Sign in
+            if (!loggedIn)
+              li
+                a(href='/signin/') Sign in
+            else
+              li
+                a(href='/signout/') Sign out
 
     .container
       block content
@@ -32,6 +39,10 @@ html
         .row
           .col-xs-12
             small &copy; Loc8r 2014
-
+    
+      if (process.env.NODE_ENV === 'development')
+        <!-- Livereload script rendered -->
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+      
     - each asset in assets.main.js
       script(src= asset)

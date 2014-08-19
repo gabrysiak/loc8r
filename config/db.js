@@ -56,4 +56,4 @@ process.on('SIGTERM', function () {
     });
 });
 
-require('../server/models/locations');
+require('../app/models/locations');
