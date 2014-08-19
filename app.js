@@ -11,6 +11,8 @@ var assetmanager = require('assetmanager');
 
 var app = express();
 
+require('./config/db');
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, '/server/views'));

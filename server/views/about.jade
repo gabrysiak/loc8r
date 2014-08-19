@@ -4,20 +4,7 @@ block content
   #banner.page-header
     .row
       .col-md-6.col-sm-12
-        h1= title
+        h1 #{title}
   .row
     .col-md-6.col-sm-12
-      p
-        | Loc8r was created to help people find places to sit down and get a bit of work done.
-        | <br /><br />
-        |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, rerum minus dolor dignissimos dolorem modi consequuntur harum veniam hic est quasi in dolores, earum, eveniet provident consectetur officia enim velit.
-      p
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illo, est. Architecto sequi, provident, atque consectetur quidem quod 
-        | animi, earum veniam quas pariatur quos? Error voluptatibus in veniam optio eaque.  Aliquid ad accusamus facilis eveniet debitis
-        | asperiores atque quae cumque tempora! Odit doloribus est ipsa necessitatibus exercitationem, itaque quam, vitae aliquid eligendi
-        | laboriosam, accusantium nihil aliquam! Libero, architecto est.  Quam, expedita ad sit? Excepturi accusantium distinctio amet quam porro,
-        | esse ipsum ratione molestias impedit, ipsa ducimus eos enim eius consequuntur nostrum qui, nihil illo minima harum maxime. Dolores, non? 
-        | Quibusdam cupiditate est doloribus voluptates at deserunt sunt libero autem enim repellat quis architecto odit sed eum cumque, ducimus
-        | ratione, esse obcaecati molestias, consectetur nulla. Eum at, ad consectetur illum.  Ad quam explicabo non, inventore a excepturi velit
-        | laborum sit veniam tempore, blanditiis ratione nihil architecto minus vel esse dolor illo repellendus repudiandae nemo cum porro? 
-        | Excepturi accusamus, voluptatum nostrum?
+      p !{(content).replace(/\n/g, '<br/>')}
