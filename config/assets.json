@@ -1,19 +1,15 @@
 {
     "main": {
-        "css": {
-            "public/build/css/main.min.css": [
+        "css": [
                 "public/libs/bootstrap/dist/css/amelia.bootstrap.css",
                 "public/libs/fontawesome/css/font-awesome.min.css",
                 "public/css/**/*.css"
-            ]
-        },
-        "js": {
+        ],
+        "js": [
             "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js": "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js",
-            "public/build/js/main.min.js": [
-                "public/libs/jquery/dist/jquery.min.js",
-                "public/libs/bootstrap/dist/js/bootstrap.min.js",
-                "public/js/**/*.js"
-            ]
-        }
+            "public/libs/jquery/dist/jquery.min.js",
+            "public/libs/bootstrap/dist/js/bootstrap.min.js",
+            "public/js/**/*.js"
+        ]
     }
 }
