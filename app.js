@@ -39,16 +39,6 @@ app.use(passport.session());
 initPassport(passport);
 
 app.use(function (req, res, next) {
-    // Configure asset manager to load all assets
-    var assets = assetmanager.process({
-        assets: require('./config/assets.json'),
-        debug: (process.env.NODE_ENV !== 'production'),
-        webroot: 'public'
-    });
-
-    // Add assets to local variables
-    res.locals.assets = assets;
-    
     res.locals.loggedIn = req.isAuthenticated();
     next();
 });
@@ -78,6 +68,16 @@ if ('development' === app.get('env')) {
         });
     });
 }
+
+// Configure asset manager to load all assets
+var assets = assetmanager.process({
+    assets: require('./config/assets.json'),
+    debug: (process.env.NODE_ENV !== 'production'),
+    webroot: 'public'
+});
+
+// Add assets to local variables
+app.locals.assets = assets;
 
 require('./routes')(app, passport);
 
